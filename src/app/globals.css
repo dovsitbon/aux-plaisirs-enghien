@@ -1,18 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #fdfbf7;
-  --paper: #f5efe4;
-  --ink: #1a1a1a;
-  --ink-soft: #45403a;
-  --muted: #7a7166;
-  --line: #e4dccd;
+  /* Warm cream & sand surfaces */
+  --cream: #fbf6eb;
+  --card: #fdfaf4;
+  --paper: #f5eadb;
+  /* Espresso text */
+  --ink: #1c1917;
+  --ink-soft: #44403c;
+  --muted: #6f655b;
+  /* Warm borders */
+  --line: #ebd3b4;
+  --line-soft: #f3e2cc;
+  /* Accents */
   --gold: #d97706;
-  --gold-text: #a3520a;
+  --gold-text: #b45309;
+  --cherry: #991b1b;
+  --cherry-deep: #7f1d1d;
+  --cherry-pale: #f7e1dc;
+  /* Frame (header, footer) */
+  --espresso: #1c1917;
+  --lacquer: #240c0c;
 }
 
 @theme inline {
   --color-cream: var(--cream);
+  --color-card: var(--card);
+  --color-line-soft: var(--line-soft);
+  --color-cherry: var(--cherry);
+  --color-cherry-deep: var(--cherry-deep);
+  --color-cherry-pale: var(--cherry-pale);
+  --color-espresso: var(--espresso);
+  --color-lacquer: var(--lacquer);
   --color-paper: var(--paper);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
@@ -26,20 +45,22 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem;
+  scroll-padding-top: 5.5rem;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
 body {
-  background: var(--cream);
+  background-color: var(--cream);
+  /* Barely-there paper grain so the cream never reads as flat white */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .15 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.6;
 }
 
 ::selection {
-  background: #f6dfbd;
+  background: #f3d9b0;
   color: var(--ink);
 }
 
@@ -59,6 +80,30 @@ body {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+/* Fret (hui wen) trim: a thin repeating key pattern used as a decorative band */
+.trim {
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10' fill='none' stroke='%23d97706' stroke-width='1'%3E%3Cpath d='M0 9.5h4.5V.5h11v6h-7v-3h4M15.5 9.5H20'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* Section separator: hairline with a centred lozenge */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gold);
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: currentColor;
+  opacity: 0.45;
 }
 
 /* Scroll reveal */

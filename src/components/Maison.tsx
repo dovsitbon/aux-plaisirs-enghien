@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function Maison() {
   return (
-    <section aria-labelledby="maison-title" className="bg-ink text-cream">
+    <section aria-labelledby="maison-title" className="bg-espresso text-cream">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:px-8 md:grid-cols-2 md:gap-16 md:py-28">
         <Reveal className="relative aspect-[4/5] overflow-hidden rounded-[6px] bg-ink-soft md:aspect-[5/6]">
           <Image src={photos.wok.src} alt={photos.wok.alt} fill sizes="(min-width: 768px) 45vw, 100vw" className="object-cover" />
@@ -25,7 +25,7 @@ export function Maison() {
               dîner sans se presser. Et tout se commande aussi à emporter.
             </p>
           </div>
-          <dl className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-cream/15 pt-6">
+          <dl className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-gold/30 pt-6">
             <div>
               <dt className="text-sm text-cream/60">Depuis</dt>
               <dd className="mt-1 font-serif text-3xl">20+ ans</dd>

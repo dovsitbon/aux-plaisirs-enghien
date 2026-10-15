@@ -34,7 +34,7 @@ export function Avis() {
               href={mapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex min-h-11 items-center text-sm font-medium underline decoration-ink/30 underline-offset-4 hover:decoration-ink"
+              className="mt-8 inline-flex min-h-11 items-center text-sm font-medium underline decoration-gold/60 underline-offset-4 transition-colors hover:text-cherry hover:decoration-cherry"
             >
               Voir tous les avis sur Google
             </a>
@@ -43,9 +43,11 @@ export function Avis() {
           <div className="lg:col-span-8">
             <div className="grid gap-px overflow-hidden rounded-[6px] border border-line bg-line md:grid-cols-2">
               {reviews.map((review, i) => (
-                <Reveal as="figure" key={i} index={i + 1} className="flex flex-col justify-between bg-cream p-7 sm:p-10">
+                <Reveal as="figure" key={i} index={i + 1} className="flex flex-col justify-between bg-card p-7 sm:p-10">
                   <blockquote className="font-serif text-2xl leading-snug sm:text-[1.65rem]">
-                    <p>«&nbsp;{review.quote}&nbsp;»</p>
+                    <p>
+                      <span className="text-gold">«</span>&nbsp;{review.quote}&nbsp;<span className="text-gold">»</span>
+                    </p>
                   </blockquote>
                   <figcaption className="mt-8 flex items-center justify-between text-sm text-muted">
                     <span>Avis Google</span>
@@ -59,12 +61,12 @@ export function Avis() {
               ))}
             </div>
 
-            <Reveal index={3} className="mt-5 grid overflow-hidden rounded-[6px] border border-line bg-cream sm:grid-cols-[13rem_1fr]">
+            <Reveal index={3} className="mt-5 grid overflow-hidden rounded-[6px] border border-line bg-card sm:grid-cols-[13rem_1fr]">
               <div className="relative aspect-[16/9] sm:aspect-auto">
                 <Image src={photos.table.src} alt={photos.table.alt} fill sizes="(min-width: 640px) 208px, 100vw" className="object-cover" />
               </div>
               <p className="p-7 text-ink-soft sm:p-8">
-                <span className="font-serif text-xl text-ink">En plein centre-ville.</span>{" "}
+                <span className="font-serif text-xl text-cherry">En plein centre-ville.</span>{" "}
                 À quelques minutes à pied de la gare SNCF d&apos;Enghien-les-Bains : idéal pour une pause
                 déjeuner comme pour un dîner entre amis ou en famille.
               </p>

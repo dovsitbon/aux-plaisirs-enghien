@@ -15,8 +15,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "#1a1a1a",
-          color: "#fdfbf7",
+          background: "#240c0c",
+          color: "#fbf6eb",
         }}
       >
         <div style={{ fontSize: 26, letterSpacing: 6, color: "#d97706", textTransform: "uppercase" }}>

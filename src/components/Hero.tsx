@@ -35,7 +35,7 @@ export function Hero() {
             className="mt-5 text-balance font-serif text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-[3.6rem] xl:text-[4.1rem]"
           >
             L&apos;Authentique Gastronomie Asiatique{" "}
-            <em className="text-gold-text">
+            <em className="text-cherry">
               au Cœur d&apos;<span className="whitespace-nowrap">Enghien-les-Bains</span>
             </em>
           </h1>
@@ -47,14 +47,14 @@ export function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <a
               href={restaurant.phoneHref}
-              className="inline-flex h-14 items-center justify-center gap-2.5 rounded-[4px] bg-ink px-7 font-medium text-cream transition-colors hover:bg-ink-soft"
+              className="inline-flex h-14 items-center justify-center gap-2.5 rounded-[4px] bg-cherry px-7 font-medium text-cream transition-colors hover:bg-cherry-deep"
             >
               <Phone className="size-4" strokeWidth={1.75} aria-hidden />
               Réserver une Table
             </a>
             <a
               href="#carte"
-              className="group inline-flex h-14 items-center justify-center gap-2 rounded-[4px] border border-ink/20 px-7 font-medium transition-colors hover:border-ink sm:border-0 sm:px-0"
+              className="group inline-flex h-14 items-center justify-center gap-2 rounded-[4px] border border-line px-7 font-medium transition-colors hover:border-cherry hover:text-cherry sm:border-0 sm:px-0"
             >
               Consulter le Menu
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} aria-hidden />

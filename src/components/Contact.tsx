@@ -20,7 +20,7 @@ export function Contact() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid border-t border-ink md:grid-cols-3">
+        <div className="mt-12 grid border-t border-gold md:grid-cols-3">
           <Reveal className="border-b border-line py-8 md:border-b-0 md:border-r md:pr-10">
             <h3 className="label text-muted">Adresse</h3>
             <address className="mt-4 font-serif text-2xl not-italic leading-snug">
@@ -33,7 +33,7 @@ export function Contact() {
               href={mapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex min-h-11 items-center gap-1.5 text-sm font-medium underline decoration-ink/30 underline-offset-4 hover:decoration-ink"
+              className="mt-5 inline-flex min-h-11 items-center gap-1.5 text-sm font-medium underline decoration-gold/60 underline-offset-4 transition-colors hover:text-cherry hover:decoration-cherry"
             >
               Itinéraire
               <ArrowUpRight className="size-4" strokeWidth={1.75} aria-hidden />
@@ -51,7 +51,7 @@ export function Contact() {
                 {schedule.map((d) => {
                   const isToday = d.day === today;
                   return (
-                    <tr key={d.day} className={isToday ? "font-semibold text-ink" : "text-ink-soft"}>
+                    <tr key={d.day} className={isToday ? "font-semibold text-cherry" : "text-ink-soft"}>
                       <th scope="row" className="py-1.5 pr-4 text-left font-[inherit]">
                         {d.label}
                         {isToday && <span className="sr-only"> (aujourd&apos;hui)</span>}
@@ -68,13 +68,13 @@ export function Contact() {
 
           <Reveal index={2} className="py-8 md:pl-10">
             <h3 className="label text-muted">Réservation</h3>
-            <a href={restaurant.phoneHref} className="mt-4 block font-serif text-4xl leading-none hover:text-gold-text">
+            <a href={restaurant.phoneHref} className="mt-4 block font-serif text-4xl leading-none transition-colors hover:text-cherry">
               {restaurant.phone}
             </a>
             <p className="mt-3 text-ink-soft">Pour réserver une table ou commander à emporter.</p>
             <a
               href={restaurant.phoneHref}
-              className="mt-6 flex h-14 items-center justify-center gap-2.5 rounded-[4px] bg-ink font-medium text-cream transition-colors hover:bg-ink-soft"
+              className="mt-6 flex h-14 items-center justify-center gap-2.5 rounded-[4px] bg-cherry font-medium text-cream transition-colors hover:bg-cherry-deep"
             >
               <Phone className="size-4" strokeWidth={1.75} aria-hidden />
               Appeler maintenant
